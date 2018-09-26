@@ -15,82 +15,60 @@
   </head>
   <body>
     <div class="container">
-      <div class="row row-md-3">
-        <div class="col col-sm-1">
-          Header
-        </div>
-      </div>
-      <div class="row">
-        <div class="col col-sm-1">
-          <button type="button" class="btn btn primary btn-lg" id="C" val="C">C</button>
-        </div>
-        <div class="col col-sm-1">
+      <table>
+        <tr>
+      <form name="calculator">
+        <input readonly type="text" name="answer" />
+      </form>
+      </tr>
+      </table>
 
+      <div buttonFormatting>
+      <div class="btn-toolbar mb-3" role="toolbar" aria-label="Toolbar with button groups">
+        <div class="btn-group mr-2" role="group" aria-label="First group">
+          <button type="button" onclick="calculator.answer.value = ''" class="btn btn-secondary">C</button>
+          <button type="button" class="btn btn-secondary"></button>
+          <button type="button" class="btn btn-secondary"></button>
+          <button type="button" onclick="calculator.answer.value += '/'" class="btn btn-secondary">/</button>
         </div>
-        <div class="col col-sm-1">
+      </div>
+      <div class="btn-toolbar mb-3" role="toolbar" aria-label="Toolbar with button groups">
+        <div class="btn-group mr-2" role="group" aria-label="First group">
+          <button type="button" onclick="calculator.answer.value += '7'" class="btn btn-secondary">7</button>
+          <button type="button" onclick="calculator.answer.value += '8'" class="btn btn-secondary">8</button>
+          <button type="button" onclick="calculator.answer.value += '9'" class="btn btn-secondary">9</button>
+          <button type="button" onclick="calculator.answer.value += '*'" class="btn btn-secondary">X</button>
+        </div>
+      </div>
+      <div class="btn-toolbar mb-3" role="toolbar" aria-label="Toolbar with button groups">
+        <div class="btn-group mr-2" role="group" aria-label="First group">
+          <button type="button" onclick="calculator.answer.value += '4'"class="btn btn-secondary">4</button>
+          <button type="button" onclick="calculator.answer.value += '5'"class="btn btn-secondary">5</button>
+          <button type="button" onclick="calculator.answer.value += '6'"class="btn btn-secondary">6</button>
+          <button type="button" onclick="calculator.answer.value += '-'"class="btn btn-secondary">-</button>
+        </div>
+      </div>
+      <div class="btn-toolbar mb-3" role="toolbar" aria-label="Toolbar with button groups">
+        <div class="btn-group mr-2" role="group" aria-label="First group">
+          <button type="button" onclick="calculator.answer.value += '1'"class="btn btn-secondary">1</button>
+          <button type="button" onclick="calculator.answer.value += '2'"class="btn btn-secondary">2</button>
+          <button type="button" onclick="calculator.answer.value += '3'"class="btn btn-secondary">3</button>
+          <button type="button" onclick="calculator.answer.value += '+'"class="btn btn-secondary">+</button>
+        </div>
+      </div>
+      <div class="btn-toolbar mb-3" role="toolbar" aria-label="Toolbar with button groups">
+        <div class="btn-group mr-2" role="group" aria-label="First group">
+          <button type="button" onclick="calculator.answer.value += '0'"class="btn btn-secondary">0</button>
+          <button type="button" class="btn btn-secondary"></button>
+          <button type="button" onclick="calculator.answer.value += '.'"class="btn btn-secondary">.</button>
+          <button type="button" onclick="calculate()"class="btn btn-secondary">=</button>
+        </div>
+      </div>
+    </div>
 
-        </div>
-        <div class="col col-sm-1">
-          <button type="button" onclick="getInput()"class="btn btn primary btn-lg" id="/" val="/">/</button>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col col-sm-1">
-          <button type="button" onclick="getInput()" class="btn btn primary btn-lg" id="7" val="7">7</button>
-        </div>
-        <div class="col col-sm-1">
-          <button type="button" onclick="getInput()" class="btn btn primary btn-lg" id ="8" val="8">8</button>
-        </div>
-        <div class="col col-sm-1">
-          <button type="button" onclick="getInput()" class="btn btn primary btn-lg" id="9" val="9">9</button>
-        </div>
-        <div class="col col-sm-1">
-          <button type="button" onclick="getInput()" class="btn btn primary btn-lg" id="X" val="X">X</button>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col col-sm-1">
-          <button type="button" onclick="getInput()" class="btn btn primary btn-lg" id="4" val="4">4</button>
-        </div>
-        <div class="col col-sm-1">
-          <button type="button" onclick="getInput()" class="btn btn primary btn-lg" id="5" val="5">5</button>
-        </div>
-        <div class="col col-sm-1">
-          <button type="button" onclick="getInput()" class="btn btn primary btn-lg" id="6" val="6">6</button>
-        </div>
-        <div class="col col-sm-1">
-          <button type="button" onclick="getInput()" class="btn btn primary btn-lg" id="-" val="-">-</button>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col col-sm-1">
-          <button type="button" onclick="getInput()" class="btn btn primary btn-lg" id="1" val="1">1</button>
-        </div>
-        <div class="col col-sm-1">
-          <button type="button" onclick="getInput()" class="btn btn primary btn-lg" id="2" val="2">2</button>
-        </div>
-        <div class="col col-sm-1">
-          <button type="button" onclick="getInput()" class="btn btn primary btn-lg" id="3" val="3">3</button>
-        </div>
-        <div class="col col-sm-1">
-          <button type="button" onclick="getInput()" class="btn btn primary btn-lg" id="+" val="+">+</button>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col col-sm-1">
-          <button type="button" onclick="getInput()" class="btn btn primary btn-lg" id="0" val="0">0</button>
-        </div>
-        <div class="col col-sm-1">
 
-        </div>
-        <div class="col col-sm-1">
-          <button type="button" onclick="getInput()" class="btn btn primary btn-lg" id="." val=".">.</button>
-        </div>
-        <div class="col col-sm-1">
-          <button type="button" onclick="getInput()" class="btn btn primary btn-lg" id="=" val="=">=</button>
-        </div>
-      </div>
-</div>
+    </div>
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
