@@ -4,6 +4,17 @@
 
 $body-bg: #ccc;
 
+.buttonFormatting{
+  margin-top: 25px;
+  display: grid;
+  grid-column-gap: 20px;
+}
+
+.container {
+  display: grid;
+  grid-column-gap: 20px;
+}
+
 
 // Import bootstrap
 @import "../../node_modules/bootstrap/scss/bootstrap";
