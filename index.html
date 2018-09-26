@@ -18,50 +18,48 @@
       <table>
         <tr>
       <form name="calculator">
-        <input readonly type="text" name="answer" />
+        <input readonly type="text" name="answer" class="inputForm"/>
       </form>
       </tr>
       </table>
 
       <div buttonFormatting>
-      <div class="btn-toolbar mb-3" role="toolbar" aria-label="Toolbar with button groups">
-        <div class="btn-group mr-2" role="group" aria-label="First group">
-          <button type="button" onclick="calculator.answer.value = ''" class="btn btn-secondary">C</button>
-          <button type="button" class="btn btn-secondary"></button>
-          <button type="button" class="btn btn-secondary"></button>
-          <button type="button" onclick="calculator.answer.value += '/'" class="btn btn-secondary">/</button>
+        <div class="btn-group mr-2">
+          <button type="button" onclick="pressClear()" class="btn btn-outline-primary">C</button>
+          <button type="button" class="btn btn-outline-primary"></button>
+          <button type="button" class="btn btn-outline-primary"></button>
+          <button type="button" onclick="pressDiv()" class="btn btn-outline-primary">/</button>
+        </div>
+      <div>
+        <div class="btn-group mr-2" >
+          <button type="button" onclick="pressSeven()" class="btn btn-outline-primary">7</button>
+          <button type="button" onclick="pressEight()" class="btn btn-outline-primary">8</button>
+          <button type="button" onclick="pressNine()" class="btn btn-outline-primary">9</button>
+          <button type="button" onclick="pressMult()" class="btn btn-outline-primary">X</button>
         </div>
       </div>
-      <div class="btn-toolbar mb-3" role="toolbar" aria-label="Toolbar with button groups">
-        <div class="btn-group mr-2" role="group" aria-label="First group">
-          <button type="button" onclick="calculator.answer.value += '7'" class="btn btn-secondary">7</button>
-          <button type="button" onclick="calculator.answer.value += '8'" class="btn btn-secondary">8</button>
-          <button type="button" onclick="calculator.answer.value += '9'" class="btn btn-secondary">9</button>
-          <button type="button" onclick="calculator.answer.value += '*'" class="btn btn-secondary">X</button>
+      <div>
+        <div class="btn-group mr-2" >
+          <button type="button" onclick="pressFour()"class="btn btn-outline-primary">4</button>
+          <button type="button" onclick="pressFive()"class="btn btn-outline-primary">5</button>
+          <button type="button" onclick="pressSix()" class="btn btn-outline-primary">6</button>
+          <button type="button" onclick="pressSub()" class="btn btn-outline-primary">-</button>
         </div>
       </div>
-      <div class="btn-toolbar mb-3" role="toolbar" aria-label="Toolbar with button groups">
-        <div class="btn-group mr-2" role="group" aria-label="First group">
-          <button type="button" onclick="calculator.answer.value += '4'"class="btn btn-secondary">4</button>
-          <button type="button" onclick="calculator.answer.value += '5'"class="btn btn-secondary">5</button>
-          <button type="button" onclick="calculator.answer.value += '6'"class="btn btn-secondary">6</button>
-          <button type="button" onclick="calculator.answer.value += '-'"class="btn btn-secondary">-</button>
+      <div>
+        <div class="btn-group mr-2" >
+          <button type="button" onclick="pressOne()"class="btn btn-outline-primary">1</button>
+          <button type="button" onclick="pressTwo()"class="btn btn-outline-primary">2</button>
+          <button type="button" onclick="pressThree()"class="btn btn-outline-primary">3</button>
+          <button type="button" onclick="pressAdd()"class="btn btn-outline-primary">+</button>
         </div>
       </div>
-      <div class="btn-toolbar mb-3" role="toolbar" aria-label="Toolbar with button groups">
-        <div class="btn-group mr-2" role="group" aria-label="First group">
-          <button type="button" onclick="calculator.answer.value += '1'"class="btn btn-secondary">1</button>
-          <button type="button" onclick="calculator.answer.value += '2'"class="btn btn-secondary">2</button>
-          <button type="button" onclick="calculator.answer.value += '3'"class="btn btn-secondary">3</button>
-          <button type="button" onclick="calculator.answer.value += '+'"class="btn btn-secondary">+</button>
-        </div>
-      </div>
-      <div class="btn-toolbar mb-3" role="toolbar" aria-label="Toolbar with button groups">
-        <div class="btn-group mr-2" role="group" aria-label="First group">
-          <button type="button" onclick="calculator.answer.value += '0'"class="btn btn-secondary">0</button>
-          <button type="button" class="btn btn-secondary"></button>
-          <button type="button" onclick="calculator.answer.value += '.'"class="btn btn-secondary">.</button>
-          <button type="button" onclick="calculate()"class="btn btn-secondary">=</button>
+      <div>
+        <div class="btn-group mr-2" >
+          <button type="button" onclick="pressZero()"class="btn btn-outline-primary">0</button>
+          <button type="button" class="btn btn-outline-primary"></button>
+          <button type="button" onclick="pressDecimal()"class="btn btn-outline-primary">.</button>
+          <button type="button" onclick="calculate()"class="btn btn-outline-primary">=</button>
         </div>
       </div>
     </div>
